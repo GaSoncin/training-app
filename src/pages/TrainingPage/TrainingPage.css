@@ -1,0 +1,50 @@
+.training-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.header {
+  background-color: #8b4513;
+  color: #fff;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2em;
+}
+
+.menu-icon {
+  margin-right: 5px;
+}
+
+.profile-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.username {
+  font-family: "Press Start 2P", cursive;
+  margin: 20px 0;
+}
+
+.profile-image {
+  border-radius: 50%;
+  border: 3px solid #3772a0;
+  width: 100px;
+  height: 100px;
+}
+
+.training-list-container {
+  margin-top: auto;
+  padding: 20px;
+}
