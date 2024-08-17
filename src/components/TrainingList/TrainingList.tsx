@@ -4,12 +4,12 @@ import "./TrainingList.css";
 
 const trainings = [
   
-  { title: "Treinamento de Produção", date: "21/10/2022" },
-  { title: "Treinamento Em Segurança", date: "15/09/2022" },
-  { title: "Treinamento Em Comunicação", date: "03/07/2022" },
-  { title: "Treinamento de Produção", date: "21/10/2022" },
-  { title: "Treinamento Em Segurança", date: "15/09/2022" },
-  { title: "Treinamento Em Comunicação", date: "03/07/2022" },
+  { title: "Treinamento de produção", date: "21/10/2022" },
+  { title: "Treinamento em segurança", date: "15/09/2022" },
+  { title: "Treinamento em comunicação", date: "03/07/2022" },
+  { title: "Treinamento de produção", date: "21/10/2022" },
+  { title: "Treinamento em segurança", date: "15/09/2022" },
+  { title: "Treinamento em comunicação", date: "03/07/2022" },
 ];
 
 const TrainingList: React.FC = () => {

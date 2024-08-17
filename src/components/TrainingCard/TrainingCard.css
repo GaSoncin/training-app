@@ -10,6 +10,8 @@
 
 .training-card h2 {
   margin-top: 0;
+  color: #000;
+  font-size: 1.3em;
 }
 
 .training-card p {

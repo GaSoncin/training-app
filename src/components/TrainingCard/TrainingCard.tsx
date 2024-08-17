@@ -10,7 +10,7 @@ const TrainingCard: React.FC<TrainingCardProps> = ({ title, date }) => {
   return (
     <div className="training-card">
       <h2>{title}</h2>
-      <p>Data de Conclusão: {date}</p>
+      <p>Data de conclusão: {date}</p>
     </div>
   );
 };
