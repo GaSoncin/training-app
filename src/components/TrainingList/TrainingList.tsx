@@ -3,6 +3,7 @@ import TrainingCard from "../TrainingCard/TrainingCard";
 import "./TrainingList.css";
 
 const trainings = [
+  
   { title: "Treinamento de Produção", date: "21/10/2022" },
   { title: "Treinamento Em Segurança", date: "15/09/2022" },
   { title: "Treinamento Em Comunicação", date: "03/07/2022" },

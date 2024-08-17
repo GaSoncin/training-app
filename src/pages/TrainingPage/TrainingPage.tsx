@@ -13,7 +13,7 @@ const TrainingPage: React.FC = () => {
         </div>
       </div>
       <div className="profile-section">
-        <h1 className="username">NOME<br />USUARIO</h1>
+        <h1 className="username">NOME<br />USURIO</h1>
         <img src={profileImage} alt="User Profile" className="profile-image" />
       </div>
       <div className="training-list-container">

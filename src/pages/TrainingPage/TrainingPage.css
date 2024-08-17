@@ -3,12 +3,14 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  background: var(--blue-gradient);
+  overflow: hidden;
 }
 
 .header {
-  background-color: #8b4513;
+  background-color: var(--brown80);
   color: #fff;
-  padding: 25px;
+  padding: 22px;
   display: flex;
   align-items: center;
   position: relative;
@@ -20,16 +22,19 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .menu-icon {
-  margin-right: 5px;
+  margin-right: 8px;
+
+  
+  
 }
 
 .profile-section {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 2px;
 }
 
 .username {
@@ -38,8 +43,6 @@
 }
 
 .profile-image {
-  border-radius: 50%;
-  border: 3px solid #3772a0;
   width: 100px;
   height: 100px;
 }
