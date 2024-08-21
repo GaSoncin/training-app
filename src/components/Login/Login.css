@@ -24,7 +24,7 @@
   border-radius: 42px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  background-color: var(--blue-opacity);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .login-container h1 {
@@ -57,12 +57,13 @@
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
+  color: #fff;
 }
 
 button {
   width: 100%;
   padding: 10px;
-  background-color: var(--green);
+  background-color: var(--bluesky);
   color: var(--white);
   border: none;
   border-radius: 25px;

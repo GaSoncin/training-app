@@ -2,10 +2,14 @@ import React from 'react';
 import TrainingList from '../../components/TrainingList/TrainingList';
 import './TrainingPage.css';
 import profileImage from '../../assets/user.png';
+import Background from "../../components/Background/Background"; // Importe o novo componente
+
 
 const TrainingPage: React.FC = () => {
   return (
+    
     <div className="training-page">
+      <Background /> 
       <div className="header">
         <div className="menu">
           <span className="menu-icon">≡</span>

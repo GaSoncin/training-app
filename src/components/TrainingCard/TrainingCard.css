@@ -1,19 +1,35 @@
 .training-card {
-  background: white;
+  background: rgba(194, 229, 228, 0.664);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 300px;
   margin: 10px;
   text-align: center;
+  border: var(--bluesky), 4px, solid;
+  transition: 0.5s;
+}
+
+.training-card:hover{
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+  border: var(--bluesky), 4px, solid;
+  cursor: pointer;
 }
 
 .training-card h2 {
   margin-top: 0;
-  color: #000;
+  color: #fff;
   font-size: 1.3em;
+  margin-bottom: 1vw;
 }
 
 .training-card p {
   color: #555;
+  font-size: 0.8em;
 }
