@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import TrainingPage from "./pages/TrainingPage/TrainingPage";
+import TrainingJourney from "./pages/TrainingJourney/TrainingJourney";
 import "./App.css";
 
 const App: React.FC = () => {
@@ -10,6 +11,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/trainings" element={<TrainingPage />} />
+        <Route path="/journey" element={<TrainingJourney />} />
       </Routes>
     </Router>
   );

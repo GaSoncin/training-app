@@ -10,7 +10,7 @@ const trainings = [
   { title: "Treinamento em segurança", date: "15/09/2022" },
   { title: "Treinamento em segurança", date: "15/09/2022" },
   { title: "Treinamento em segurança", date: "15/09/2022" },
-  
+  { title: "Treinamento em segurança", date: "15/09/2022" },
   { title: "Treinamento em segurança", date: "15/09/2022" },
 ];
 

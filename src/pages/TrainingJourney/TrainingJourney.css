@@ -1,0 +1,89 @@
+.training-journey {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: auto;
+}
+
+.title {
+  margin-top: 80px;
+  font-size: 2.5rem;
+  font-family: "Press Start 2P", cursive;
+  color: white;
+}
+
+.journey-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 50px;
+}
+
+.stage {
+  text-align: center;
+  margin: 20px;
+}
+
+.stage-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.header {
+  background: rgba(0, 0, 0, 0.6);;
+  color: #fff;
+  width: 100vw;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  height: 1vw;
+}
+
+.menu {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  margin-right: 15px;
+  font-size: 34px; 
+  cursor: pointer; 
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: transparent;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu button {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.dropdown-menu button:hover {
+  background-color: var(--bluesky);
+}
