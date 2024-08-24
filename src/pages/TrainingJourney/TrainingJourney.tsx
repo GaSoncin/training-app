@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./TrainingJourney.css";
-import blockIcon from "../../assets/block.png";
+import blockIcon1 from "../../assets/block.png";
+import blockIcon2 from "../../assets/block.png";
+import blockIcon3 from "../../assets/block.png";
+import blockIcon4 from "../../assets/block.png";
+import blockIcon5 from "../../assets/block.png";
 import characterIcon from "../../assets/character.png";
 import trophyIcon from "../../assets/trophy.png";
 import Background from "../../components/Background/Background";
@@ -9,11 +13,11 @@ import Background from "../../components/Background/Background";
 const TrainingJourney: React.FC = () => {
   const [currentPosition, setCurrentPosition] = useState(0);
   const stages = [
-    { id: 0, name: "Introdução a produção", icon: blockIcon },
-    { id: 1, name: "Conceitos de produção pt1", icon: blockIcon },
-    { id: 2, name: "Conceitos de produção pt2", icon: blockIcon },
-    { id: 3, name: "Metas de produção", icon: blockIcon },
-    { id: 4, name: "Sequência de produção", icon: blockIcon },
+    { id: 0, name: "Introdução a produção", icon: blockIcon1 },
+    { id: 1, name: "Conceitos de produção pt1", icon: blockIcon2 },
+    { id: 2, name: "Conceitos de produção pt2", icon: blockIcon3 },
+    { id: 3, name: "Metas de produção", icon: blockIcon4 },
+    { id: 4, name: "Sequência de produção", icon: blockIcon5 },
     { id: 5, name: "Certificação", icon: trophyIcon },
   ];
 
@@ -65,14 +69,11 @@ const TrainingJourney: React.FC = () => {
         ))}
       </div>
       <div className="controls">
-        <button onClick={moveLeft} disabled={currentPosition === 0}>
-          Esquerda
-        </button>
         <button
           onClick={moveRight}
           disabled={currentPosition === stages.length - 1}
         >
-          Direita
+          Modulo Conluido
         </button>
       </div>
     </div>

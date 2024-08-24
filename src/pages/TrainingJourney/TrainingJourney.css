@@ -4,8 +4,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  position: relative;
   overflow: auto;
+  position: fixed;
+  justify-content: space-between;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.0);
 }
 
 .title {
@@ -21,7 +24,22 @@
   width: 100%;
   max-width: 1200px;
   margin-top: 50px;
+  color: #fff;
 }
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Ajuste a altura conforme necessário */
+  }
+}
+
+.character {
+  animation: float 2s ease-in-out infinite;
+}
+
 
 .stage {
   text-align: center;
