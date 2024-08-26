@@ -46,8 +46,9 @@ const TrainingJourney: React.FC = () => {
           <span className="menu-text">menu</span>
           {menuOpen && (
             <div className="dropdown-menu">
-              <button onClick={() => navigate(-1)}>Voltar</button>
-              <button onClick={() => navigate("/journey")}>Avançar</button>
+              <button onClick={() => navigate("/")}>Sair</button>
+              <button onClick={() => navigate("/trainings")}>Perfil</button>
+              <button onClick={() => navigate("/iapage")}>GALLI</button>
             </div>
           )}
         </div>
