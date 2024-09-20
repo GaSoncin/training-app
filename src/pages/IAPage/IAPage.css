@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 .IA-page {
   position: fixed;
   display: flex;
@@ -17,6 +19,7 @@
   padding: 22px;
   display: flex;
   align-items: center;
+  font-family: 'Roboto', sans-serif; /* Fonte aplicada aqui */
 }
 
 .menu {
@@ -57,6 +60,7 @@
   cursor: pointer;
   border-radius: 4px;
   width: 100%;
+  font-family: 'Roboto', sans-serif; /* Fonte aplicada aqui */
 }
 
 .dropdown-menu button:hover {
@@ -82,6 +86,8 @@
   justify-content: flex-end;
   align-items: flex-start;
   padding: 20px; 
+  overflow-y: auto; /* Adiciona rolagem vertical */
+  font-family: 'Roboto', sans-serif; /* Fonte aplicada aqui */
 }
 
 .text-bar {
@@ -102,17 +108,63 @@
   flex-direction: column;
   align-items: flex-start; 
   height: 100%;
+  overflow-y: auto; /* Adiciona rolagem vertical */
 }
 
-.IaChat {
-  font-size: 15px;
-  background-color: rgba(40, 44, 52, 0.9);
-  color: #fff;
-  padding: 15px 20px;
+/* Estilo dos balões de fala do usuário */
+.user-chat {
+  align-self: flex-end;
+  background-color: rgba(54, 120, 201, 0.9); /* Azul para o usuário */
+  color: white; /* Texto branco */
+  padding: 10px 15px; /* Diminuindo o padding */
   border-radius: 20px;
   max-width: 80%; /* Ajusta o tamanho máximo do balão */
-  margin: 10px 0; /* Adiciona espaçamento entre os balões */
-  box-shadow: 0px 0px 15px 0px var(--bluesky); 
+  margin: 10px 0;
+  box-shadow: 0px 0px 15px 0px var(--bluesky);
   text-align: left;
-  margin: 50px 40px;
+  margin-right: 20px;
+  position: relative;
+  overflow-wrap: break-word; /* Quebra palavras longas */
+  word-wrap: break-word; /* Quebra palavras longas em navegadores mais antigos */
+  font-family: 'Roboto', sans-serif; /* Fonte aplicada aqui */
+}
+
+/* Adiciona uma seta no balão do usuário */
+.user-chat::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -10px; /* Ajuste a seta na borda direita */
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgba(54, 120, 201, 0.9) transparent transparent transparent;
+}
+
+/* Estilo dos balões de fala da IA */
+.IaChat {
+  align-self: flex-start;
+  background-color: rgba(40, 44, 52, 0.9); /* Cinza escuro para a IA */
+  color: white; /* Texto branco */
+  padding: 10px 15px; /* Diminuindo o padding */
+  border-radius: 20px;
+  max-width: 80%; /* Ajusta o tamanho máximo do balão */
+  margin: 10px 0;
+  box-shadow: 0px 0px 15px 0px var(--bluesky);
+  text-align: left;
+  margin-left: 20px;
+  position: relative;
+  overflow-wrap: break-word; /* Quebra palavras longas */
+  word-wrap: break-word; /* Quebra palavras longas em navegadores mais antigos */
+  font-family: 'Roboto', sans-serif; /* Fonte aplicada aqui */
+}
+
+/* Adiciona uma seta no balão da IA */
+.IaChat::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -10px; /* Ajuste a seta na borda esquerda */
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgba(40, 44, 52, 0.9) transparent transparent transparent;
 }
