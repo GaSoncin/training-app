@@ -9,8 +9,9 @@ const IApage: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState([
-    { speaker: "IA", message: "Como posso ajudar ?" },
+    { speaker: "IA", message: "Como posso ajudar?" },
   ]);
+  const [loading, setLoading] = useState(false); // Estado de carregamento
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -23,25 +24,20 @@ const IApage: React.FC = () => {
   const sendMessage = async () => {
     if (userInput.trim() === "") return;
 
-    // Adiciona a mensagem do usuário ao histórico
     const newChatHistory = [
       ...chatHistory,
       { speaker: "user", message: userInput },
     ];
     setChatHistory(newChatHistory);
     setUserInput("");
+    setLoading(true); // Ativa o carregamento
 
-    // Configura a mensagem no formato adequado
     const messages = newChatHistory.map((chat) => ({
       role: chat.speaker === "IA" ? "assistant" : "user",
       content: chat.message,
     }));
 
-    // Debug: Verificar se as mensagens estão sendo corretamente formatadas
-    console.log("Mensagens enviadas:", messages);
-
     try {
-      // Envia a mensagem para o servidor da IA no LM Studio
       const response = await fetch("/api/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -52,20 +48,17 @@ const IApage: React.FC = () => {
           messages: messages,
         }),
       });
-      
 
       const data = await response.json();
+      setLoading(false); // Desativa o carregamento
 
-      // Debug: Verificar a resposta recebida do servidor
-      console.log("Resposta do servidor:", data);
-
-      // Adiciona a resposta da IA ao histórico de chat
       if (data.choices && data.choices.length > 0) {
         const iaMessage = data.choices[0].message.content;
         setChatHistory([...newChatHistory, { speaker: "IA", message: iaMessage }]);
       }
     } catch (error) {
       console.error("Erro ao enviar mensagem:", error);
+      setLoading(false); // Desativa o carregamento mesmo em caso de erro
     }
   };
 
@@ -97,6 +90,9 @@ const IApage: React.FC = () => {
               {chat.message}
             </div>
           ))}
+          {loading && (
+            <div className="loading">Carregando...</div> /* Animação de carregamento */
+          )}
         </div>
         <input
           className="text-bar"
